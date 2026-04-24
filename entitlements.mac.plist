@@ -5,7 +5,7 @@
     <!-- Allow outgoing network connections (Figma API, Anthropic API) -->
     <key>com.apple.security.network.client</key>
     <true/>
-    <!-- Allow Keychain access for secure credential storage -->
+    <!-- Allow Just-In-Time compilation (required for Electron's V8 JIT under Hardened Runtime) -->
     <key>com.apple.security.cs.allow-jit</key>
     <true/>
     <!-- Required for Electron to function with Hardened Runtime -->
