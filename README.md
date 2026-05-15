@@ -1,20 +1,22 @@
-<p align="center">
-  <img src="assets/app-icon.png" width="128" height="128" alt="Figma Responder app icon">
-</p>
+<p><img src="assets/app-icon.png" width="128" height="128" alt="Figma Responder app icon"></p>
 
-<h1 align="center">Figma Responder</h1>
+<h1>Figma Responder</h1>
 
-<p align="center">@ai in a Figma comment. Claude replies with design feedback.<br>
+<p>@ai in a Figma comment. Claude replies with design feedback.<br>
 Inline design review without leaving the file.</p>
 
-<p align="center">macOS · Electron · Node.js</p>
-<p align="center"><a href="https://github.com/madebysan/figma-responder/releases/latest"><strong>Download Figma Responder</strong></a></p>
+<p><strong>macOS</strong> · Electron · Node.js</p>
 
-<p align="center">
-  <video src="assets/demo.mp4" controls width="720"></video>
+<p>
+  <img src="https://img.shields.io/badge/Electron-47848f" alt="Electron">
+  <img src="https://img.shields.io/badge/TypeScript-3178c6" alt="TypeScript">
+  <img src="https://img.shields.io/badge/Node.js-339933" alt="Node.js">
+  <img src="https://img.shields.io/badge/Claude%20API-d97757" alt="Claude API">
 </p>
 
----
+<p><a href="https://github.com/madebysan/figma-responder/releases/latest">Download Figma Responder</a></p>
+
+<video src="assets/demo.mp4" controls width="720"></video>
 
 I use AI every day in my design workflow for copy rewrites, UX audits, accessibility checks, feedback loops. It's great. But the friction of switching apps, taking screenshots, and losing context breaks the flow.
 
