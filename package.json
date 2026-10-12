@@ -1,6 +1,6 @@
 {
   "name": "figma-ai-responder",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Menu bar app that responds to @AI mentions in Figma comments",
   "main": "dist/main/main.js",
   "author": "San",
