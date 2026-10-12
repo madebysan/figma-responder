@@ -19,6 +19,9 @@ interface AppConfig {
   monitoredFiles?: string[];
 }
 
+const DEFAULT_MODEL = 'claude-sonnet-5-5';
+const SUPPORTED_MODELS = ['claude-sonnet-5-5', 'claude-opus-5-5', 'claude-haiku-5-5'];
+
 // Store for app data (sensitive data uses safeStorage, not electron-store encryption)
 const store = new Store<{
   encrypted: Record<string, string>;
@@ -96,7 +99,9 @@ export const appStore = {
   },
 
   getClaudeModel(): string {
-    return (store.get('plain.claudeModel') as string) || 'claude-sonnet-4-6';
+    const saved = store.get('plain.claudeModel') as string | undefined;
+    // Older builds saved Claude 4.x model IDs; move them to the current default.
+    return saved && SUPPORTED_MODELS.includes(saved) ? saved : DEFAULT_MODEL;
   },
 
   // Custom system prompt
