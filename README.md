@@ -5,7 +5,7 @@
 <p>@ai in a Figma comment. Claude replies with design feedback.<br>
 Inline design review without leaving the file.</p>
 
-<p><strong>macOS</strong> · Electron · Node.js</p>
+<p><strong>Version 2.0.0</strong> · macOS · Apple Silicon</p>
 
 <p>
   <img src="https://img.shields.io/badge/Electron-47848f" alt="Electron">
@@ -15,8 +15,6 @@ Inline design review without leaving the file.</p>
 </p>
 
 <p><a href="https://github.com/madebysan/figma-responder/releases/latest">Download Figma Responder</a></p>
-
-<video src="assets/demo.mp4" controls width="720"></video>
 
 I use AI every day in my design workflow for copy rewrites, UX audits, accessibility checks, feedback loops. It's great. But the friction of switching apps, taking screenshots, and losing context breaks the flow.
 
