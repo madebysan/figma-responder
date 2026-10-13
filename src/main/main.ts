@@ -348,7 +348,7 @@ function setupIPC(): void {
 app.whenReady().then(() => {
   // Hide dock icon (menu bar app only)
   if (process.platform === 'darwin') {
-    app.dock.hide();
+    app.dock?.hide();
   }
 
   setupIPC();
@@ -367,9 +367,8 @@ app.whenReady().then(() => {
 });
 
 // Prevent app from quitting when all windows are closed (menu bar app)
-app.on('window-all-closed', (e: Event) => {
-  e.preventDefault();
-});
+// Listening is enough: Electron only quits on its own when no listener exists.
+app.on('window-all-closed', () => {});
 
 // Handle activate (macOS)
 app.on('activate', () => {
