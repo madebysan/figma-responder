@@ -48,7 +48,18 @@
         "releaseType": "release"
       }
     ],
-    "artifactName": "Figma-Responder-${version}-${arch}.${ext}"
+    "artifactName": "Figma-Responder-${version}-${arch}.${ext}",
+    "extraResources": [
+      "THIRD_PARTY_NOTICES.md",
+      {
+        "from": "node_modules/electron/dist/LICENSE",
+        "to": "LICENSE.electron.txt"
+      },
+      {
+        "from": "node_modules/electron/dist/LICENSES.chromium.html",
+        "to": "LICENSES.chromium.html"
+      }
+    ]
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.39.0",

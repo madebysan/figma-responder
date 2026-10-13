@@ -17,6 +17,9 @@ VERSION="$(node -p "require('./package.json').version")"
 APP="release/mac-arm64/Figma AI Responder.app"
 WORK="$(mktemp -d "${TMPDIR:-/tmp}/figma-responder-release.XXXXXX")"
 
+# Electron's own license files ship in the app (see extraResources); its
+# install step puts them in node_modules/electron/dist.
+node node_modules/electron/install.js
 npm run build
 
 # 1. Signed app only.
