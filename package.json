@@ -19,14 +19,17 @@
     "mac": {
       "category": "public.app-category.developer-tools",
       "icon": "assets/icon.icns",
-      "target": "dmg",
+      "target": [
+        "dmg",
+        "zip"
+      ],
       "identity": "Santiago Alonso Alexandre (QAMM2A6WRQ)",
       "hardenedRuntime": true,
       "gatekeeperAssess": false,
       "entitlements": "entitlements.mac.plist",
-      "entitlementsInherit": "entitlements.mac.plist"
+      "entitlementsInherit": "entitlements.mac.plist",
+      "notarize": true
     },
-    "afterSign": "scripts/notarize.js",
     "dmg": {
       "sign": false
     },
@@ -36,11 +39,21 @@
     ],
     "directories": {
       "output": "release"
-    }
+    },
+    "publish": [
+      {
+        "provider": "github",
+        "owner": "madebysan",
+        "repo": "figma-responder",
+        "releaseType": "release"
+      }
+    ],
+    "artifactName": "Figma-Responder-${version}-${arch}.${ext}"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.39.0",
-    "electron-store": "^8.1.0"
+    "electron-store": "^8.1.0",
+    "electron-updater": "^6.8.9"
   },
   "devDependencies": {
     "@electron/notarize": "^3.1.1",

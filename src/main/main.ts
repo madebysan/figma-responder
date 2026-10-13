@@ -12,6 +12,7 @@ import {
   NativeImage,
 } from 'electron';
 import path from 'path';
+import { autoUpdater } from 'electron-updater';
 import { appStore } from './store';
 import {
   startPolling,
@@ -195,6 +196,11 @@ function updateTrayMenu(): void {
       label: 'API Keys...',
       click: () => createSetupWindow(),
     },
+    {
+      label: 'Check for Updates...',
+      enabled: app.isPackaged,
+      click: () => checkForUpdates(),
+    },
     { type: 'separator' },
     {
       label: 'Quit',
@@ -345,7 +351,21 @@ function setupIPC(): void {
 /**
  * App initialization.
  */
+/**
+ * In-app updates from the repo's GitHub Releases (latest-mac.yml and the zip
+ * built next to the DMG). Downloads in the background and installs on quit;
+ * failures stay quiet because the feed only works once the repo is public.
+ */
+function checkForUpdates(): void {
+  if (!app.isPackaged) return;
+  autoUpdater.checkForUpdatesAndNotify().catch((error) => {
+    console.warn('Update check failed:', error?.message ?? error);
+  });
+}
+
 app.whenReady().then(() => {
+  checkForUpdates();
+
   // Hide dock icon (menu bar app only)
   if (process.platform === 'darwin') {
     app.dock?.hide();
