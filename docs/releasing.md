@@ -13,3 +13,7 @@ In-app updates (electron-updater) read `latest-mac.yml` from the newest release
 and download the zip in the background; the update installs when the app quits.
 Checks only work once the repo is public. Copies older than the first release
 with the updater have to be updated by hand once.
+
+Before the first release with the updater, run `scripts/update-test.sh` once: it
+builds a throwaway 99.0.0, serves it from a local feed and checks a test copy
+updates itself on quit (passed 2026-10-13).
