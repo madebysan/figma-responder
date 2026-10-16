@@ -22,6 +22,8 @@ I use AI every day for copy rewrites, UX audits and accessibility checks, but sw
 - Claude sees a screenshot of the frame the comment is pinned to.
 - Follow-ups keep the thread's history, so the conversation stays in context.
 
+Figma's own AI agent works on the canvas and in a side panel; as far as I've found, it doesn't reply inside comment threads.
+
 ## How it works
 
 Add a Figma file URL to the dashboard and the app checks it every 30 seconds. When a comment contains your trigger phrase (`@ai` by default, or any phrase you set), it captures the pinned frame, sends it with the thread to Claude (Sonnet 5.5 by default), and posts the reply. You can edit the system prompt to shape the feedback. It only comments; for changes to the file itself, use [figma-autopilot](https://github.com/madebysan/claude-figma-skills) in Claude Code.
