@@ -100,24 +100,6 @@ export async function getFile(token: string, fileKey: string): Promise<FigmaFile
 }
 
 /**
- * Get specific nodes from a file.
- */
-export async function getFileNodes(
-  token: string,
-  fileKey: string,
-  nodeIds: string[]
-): Promise<Record<string, { document: FigmaFile['document'] }>> {
-  const ids = nodeIds.join(',');
-  const data = await figmaFetch<{
-    nodes: Record<string, { document: FigmaFile['document'] }>;
-  }>(
-    `/files/${fileKey}/nodes?ids=${encodeURIComponent(ids)}`,
-    token
-  );
-  return data.nodes;
-}
-
-/**
  * Export nodes as images.
  */
 export async function getImages(
@@ -146,14 +128,4 @@ export async function getImages(
  */
 export async function getCurrentUser(token: string): Promise<{ id: string; handle: string; email: string }> {
   return figmaFetch('/me', token);
-}
-
-/**
- * Get team projects (to find files to monitor).
- */
-export async function getTeamProjects(token: string, teamId: string): Promise<{
-  name: string;
-  projects: { id: string; name: string }[];
-}> {
-  return figmaFetch(`/teams/${teamId}/projects`, token);
 }

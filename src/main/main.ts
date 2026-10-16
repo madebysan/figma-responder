@@ -153,7 +153,6 @@ function createTray(): void {
 function updateTrayMenu(): void {
   if (!tray) return;
 
-  const status = getStatus();
   const isActive = isPollingActive();
   const hasCredentials = appStore.hasCredentials();
   const files = appStore.getMonitoredFiles();

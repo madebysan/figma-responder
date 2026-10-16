@@ -4,20 +4,6 @@
  */
 import { safeStorage } from 'electron';
 import Store from 'electron-store';
-import path from 'path';
-
-// Type for our stored config
-interface AppConfig {
-  figmaAccessToken?: string;
-  anthropicApiKey?: string;
-  pollingInterval?: number;  // in seconds
-  claudeModel?: string;
-  isSetupComplete?: boolean;
-  // Track which comments we've already responded to
-  processedComments?: string[];
-  // Files to monitor (team files only)
-  monitoredFiles?: string[];
-}
 
 const DEFAULT_MODEL = 'claude-sonnet-5-5';
 const SUPPORTED_MODELS = ['claude-sonnet-5-5', 'claude-opus-5-5', 'claude-haiku-5-5'];

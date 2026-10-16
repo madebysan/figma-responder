@@ -19,7 +19,7 @@ export async function generateResponse(
     apiKey,
   });
 
-  const { commentText, imageBase64, fileName, userName } = context;
+  const { imageBase64 } = context;
 
   // Build the user message content
   const userContent: Anthropic.MessageCreateParams['messages'][0]['content'] = [];

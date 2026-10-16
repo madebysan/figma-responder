@@ -5,24 +5,6 @@ import { FigmaNode } from '../types';
 import { getFile, getImages, getComment } from './figma-api';
 
 /**
- * Find a node by ID in the document tree.
- */
-function findNodeById(root: FigmaNode, targetId: string): FigmaNode | null {
-  if (root.id === targetId) {
-    return root;
-  }
-
-  if (root.children) {
-    for (const child of root.children) {
-      const found = findNodeById(child, targetId);
-      if (found) return found;
-    }
-  }
-
-  return null;
-}
-
-/**
  * Find the path from root to a specific node.
  * Returns array of nodes from root to target.
  */

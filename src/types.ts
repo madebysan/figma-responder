@@ -1,25 +1,3 @@
-// Figma Webhook Payload for FILE_COMMENT events
-export interface FigmaWebhookPayload {
-  event_type: 'FILE_COMMENT' | 'PING';
-  passcode: string;
-  timestamp: string;
-  webhook_id: string;
-  // FILE_COMMENT specific fields
-  file_key?: string;
-  file_name?: string;
-  comment_id?: string;
-  comment?: FigmaCommentPayload[];
-  triggered_by?: {
-    id: string;
-    handle: string;
-  };
-}
-
-// Comment in webhook payload (minimal)
-export interface FigmaCommentPayload {
-  text: string;
-}
-
 // Full comment from REST API
 export interface FigmaComment {
   id: string;
