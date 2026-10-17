@@ -7,7 +7,7 @@
 # test copy creates (~/Library/Caches/*figma-ai-responder*,
 # ~/Library/Application Support/figma-ai-responder) if they weren't there before.
 set -euo pipefail
-cd ~/Projects/figma-responder
+cd "$(dirname "$0")/.."
 ID="Developer ID Application: Santiago Alonso Alexandre (QAMM2A6WRQ)"
 APPNAME="Figma AI Responder"
 BID="com.san.figma-ai-responder"
