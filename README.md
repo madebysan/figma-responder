@@ -5,7 +5,7 @@
 <p>Type @ai in a Figma comment and Claude replies with design feedback.<br>
 Design review inside the file, from a Mac menu bar app.</p>
 
-<p><strong>Version 2.0.1</strong> · macOS · Apple Silicon</p>
+<p><strong>Version 2.0.2</strong> · macOS · Apple Silicon</p>
 
 <p>
   <img src="https://img.shields.io/badge/Electron-47848f" alt="Electron">
