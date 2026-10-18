@@ -16,6 +16,8 @@ Design review inside the file, from a Mac menu bar app.</p>
 
 <p><a href="https://github.com/madebysan/figma-responder/releases/latest">Download Figma Responder</a></p>
 
+https://github.com/user-attachments/assets/ba5d3899-d52f-4682-8fd2-998a7884dd4c
+
 I use AI every day for copy rewrites, UX audits and accessibility checks, but switching apps and taking screenshots kept breaking the flow. So I built the feature I wished Figma had.
 
 - Leave a comment with `@ai` and get a reply in the same thread.
