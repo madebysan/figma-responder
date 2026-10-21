@@ -23,6 +23,3 @@ coverage/
 # Electron builder
 *.dmg
 *.app
-
-# Notarization (contains local credentials path)
-scripts/notarize.js
